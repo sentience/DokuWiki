@@ -1,0 +1,20 @@
+{
+	"schema_version": "1.2",
+	"packages": [
+		{
+			"name": "DokuWiki",
+			"description": "DokuWiki syntax support for Sublime Text 2",
+			"author": "Kevin Yank",
+			"homepage": "https://github.com/sentience/DokuWiki",
+			"last_modified": "2012-08-30 00:20:00",
+			"platforms": {
+				"*": [
+					{
+						"version": "1.0.0",
+						"url": "https://nodeload.github.com/sentience/DokuWiki/zipball/1.0.0"
+					}
+				]
+			}
+		}
+	]
+}
