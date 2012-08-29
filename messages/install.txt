@@ -1,0 +1,5 @@
+DokuWiki Syntax v1.0.0 installed!
+
+Currently this package only provides syntax highlighting for DokuWiki syntax. Snippets and other niceties coming soon.
+
+File with a .docuwiki extension are automatically opened in DokuWiki syntax mode. Otherwise, you can select DokuWiki syntax manually (from the Command Palette, from the syntax list at the bottom-right of the Sublime Text 2 window, or from the View > Syntax menu).
