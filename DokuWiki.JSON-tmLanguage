@@ -1,0 +1,329 @@
+{ "name": "DokuWiki",
+  "scopeName": "text.html.dokuwiki",
+  "fileTypes": ["dokuwiki"],
+  "patterns": [
+    { "include": "#php" },
+    { "include": "#inline" },
+    {
+      "name": "markup.heading.dokuwiki",
+      "match": "^\\s*(={2,6})(.*)(\\1)\\s*$\\n?",
+      "captures": {
+        "1": { "name": "punctuation.definition.heading.dokuwiki" },
+        "3": { "name": "punctuation.definition.heading.dokuwiki" }
+      },
+      "comment": "====== heading ======="
+    },
+    {
+      "name": "keyword.control.notoc.dokuwiki",
+      "match": "~~NOTOC~~",
+      "comment": "~~NOTOC~~ disables TOC for this page"
+    },
+    {
+      "name": "keyword.control.nocache.dokuwiki",
+      "match": "~~NOCACHE~~",
+      "comment": "~~NOCACHE~~ disables cache for this page"
+    },
+    {
+      "name": "meta.separator.dokuwiki",
+      "match": "^\\s*-{4,}\\s*$",
+      "comment": "---- creates a horizontal rule"
+    },
+    {
+      "name": "markup.list.unnumbered.dokuwiki",
+      "begin": "^((\t+)|( {2,}))(\\*)",
+      "beginCaptures": {
+        "4": { "name": "punctuation.definition.list_item.dokuwiki" }
+      },
+      "end": "$\\n?",
+      "patterns": [
+        { "include": "#inline" }
+      ],
+      "comment": "  * unordered list"
+    },
+    {
+      "name": "markup.list.numbered.dokuwiki",
+      "begin": "^((\t+)|( {2,}))(-)",
+      "beginCaptures": {
+        "4": { "name": "punctuation.definition.list_item.dokuwiki" }
+      },
+      "end": "$\\n?",
+      "patterns": [
+        { "include": "#inline" }
+      ],
+      "comment": "  - ordered list"
+    },
+    {
+      "name": "markup.other.table.dokuwiki",
+      "begin": "^[|^]",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.table.dokuwiki" }
+      },
+      "end": "$",
+      "patterns": [
+        { "include": "#inline" }
+      ]
+    },
+    {
+      "name": "markup.raw.dokuwiki",
+      "begin": "(<)(file)(>)",
+      "end": "(</)(\\2)(>)",
+      "captures": {
+        "0": { "name": "meta.tag.template.dokuwiki" },
+        "1": { "name": "punctuation.definition.tag.dokuwiki" },
+        "2": { "name": "entity.name.tag.dokuwiki" },
+        "3": { "name": "punctuation.definition.tag.dokuwiki" }
+      },
+      "comment": "<file>file listing</file>"
+    },
+    {
+      "begin": "(<)(html)(>)",
+      "end": "(</)(\\2)(>)",
+      "captures": {
+        "0": { "name": "meta.tag.template.block.dokuwiki" },
+        "1": { "name": "punctuation.definition.tag.dokuwiki" },
+        "2": { "name": "entity.name.tag.dokuwiki" },
+        "3": { "name": "punctuation.definition.tag.dokuwiki" }
+      },
+      "patterns": [
+        { "include": "text.html.basic" }
+      ],
+      "comment": "embedded <html>"
+    },
+    {
+      "name": "markup.raw.dokuwiki",
+      "match": "^((\\s\\s)|(\\t))[^\\*\\-].*$",
+      "comment": "  code block"
+    },
+    {
+      "name": "markup.deleted.dokuwiki",
+      "begin": "(<)(del)(>)",
+      "end": "(</)(\\2)(>)",
+      "captures": {
+        "0": { "name": "meta.tag.template.dokuwiki" },
+        "1": { "name": "punctuation.definition.tag.dokuwiki" },
+        "2": { "name": "entity.name.tag.dokuwiki" },
+        "3": { "name": "punctuation.definition.tag.dokuwiki" }
+      },
+      "patterns": [
+        { "include": "#inline" }
+      ],
+      "comment": "<del>eted text</del>"
+    },
+    {
+      "name": "markup.other.dokuwiki",
+      "begin": "(<)(sub|sup)(>)",
+      "end": "(</)(\\2)(>)",
+      "captures": {
+        "0": { "name": "meta.tag.template.dokuwiki" },
+        "1": { "name": "punctuation.definition.tag.dokuwiki" },
+        "2": { "name": "entity.name.tag.dokuwiki" },
+        "3": { "name": "punctuation.definition.tag.dokuwiki" }
+      },
+      "patterns": [
+        { "include": "#inline" }
+      ],
+      "comment": "<sup>erscript</sup> or <sub>script</sub>"
+    },
+    {
+      "name": "markup.raw.dokuwiki",
+      "begin": "(<)(code)(?:\\s+[^>]*)?(>)",
+      "end": "(</)(\\2)(>)",
+      "captures": {
+        "0": { "name": "meta.tag.template.code.dokuwiki" },
+        "1": { "name": "punctuation.definition.tag.dokuwiki" },
+        "2": { "name": "entity.name.tag.dokuwiki" },
+        "3": { "name": "punctuation.definition.tag.dokuwiki" }
+      },
+      "comment": "<code>code block</code>"
+    }
+  ],
+  "repository": {
+    "inline": {
+      "patterns": [
+        {
+          "name": "markup.bold.dokuwiki",
+          "begin": "(\\*\\*)",
+          "end": "\\1",
+          "captures": {
+            "0": { "name": "punctuation.definition.bold.dokuwiki" }
+          },
+          "patterns": [
+            { "include": "#inline" }
+          ],
+          "comment": "**bold text**"
+        },
+        {
+          "name": "markup.italic.dokuwiki",
+          "begin": "(//)",
+          "end": "\\1",
+          "captures": {
+            "0": { "name": "punctuation.definition.italic.dokuwiki" }
+          },
+          "patterns": [
+            { "include": "#inline" }
+          ],
+          "comment": "//italic text//"
+        },
+        {
+          "name": "markup.underline.dokuwiki",
+          "begin": "(__)",
+          "end": "\\1",
+          "captures": {
+            "0": { "name": "punctuation.definition.underline.dokuwiki" }
+          },
+          "patterns": [
+            { "include": "#inline" }
+          ],
+          "comment": "__underlined text__"
+        },
+        {
+          "name": "markup.raw.dokuwiki",
+          "begin": "('')",
+          "end": "\\1",
+          "captures": {
+            "0": { "name": "punctuation.definition.raw.dokuwiki" }
+          },
+          "patterns": [
+            { "include": "#inline" }
+          ],
+          "comment": "''monospaced text''"
+        },
+        {
+          "name": "meta.image.inline.dokuwiki",
+          "match": "({{)(.+?)(}})",
+          "captures": {
+            "1": { "name": "punctuation.definition.image.dokuwiki" },
+            "2": { "name": "markup.underline.link.dokuwiki" },
+            "3": { "name": "punctuation.definition.image.dokuwiki" }
+          },
+          "comment": "{{image}}"
+        },
+        {
+          "name": "meta.link.dokuwiki",
+          "match": "(\\[\\[)(.+?)(\\]\\])",
+          "captures": {
+            "1": { "name": "punctuation.definition.link.dokuwiki" },
+            "2": { "name": "markup.underline.link.dokuwiki" },
+            "3": { "name": "punctuation.definition.link.dokuwiki" }
+          },
+          "comment": "[[link]]"
+        },
+        {
+          "match": "(\\[\\[)([^\\[\\]]+>[^|\\]]+)(\\]\\])",
+          "captures": {
+            "1": { "name": "punctuation.definition.link.dokuwiki" },
+            "2": { "name": "markup.underline.link.dokuwiki" },
+            "3": { "name": "punctuation.definition.link.dokuwiki" }
+          },
+          "comment": "[[interwiki>link]]"
+        },
+        {
+          "name": "markup.underline.link.dokuwiki",
+          "match": "(https?|telnet|gopher|wais|ftp|ed2k|irc)://[\\w/\\#~:.?+=&%@!\\-;,]+?(?=[.:?\\-;,]*[^\\w/\\#~:.?+=&%@!\\-;,])",
+          "comment": "auto-link URLs"
+        },
+        {
+          "name": "meta.link.email.dokuwiki",
+          "match": "(<)([\\w0-9\\-_.]+?@[\\w\\-]+\\.[\\w\\-\\.]+\\.*[\\w]+)(>)",
+          "captures": {
+              "1": { "name": "punctuation.definition.link.dokuwiki" },
+              "2": { "name": "markup.underline.link.dokuwiki" },
+              "3": { "name": "punctuation.definition.link.dokuwiki" }
+          }
+        },
+        {
+          "name": "markup.raw.dokuwiki",
+          "begin": "(<)(nowiki)(>)",
+          "end": "(</)(\\2)(>)",
+          "captures": {
+            "0": { "name": "meta.tag.template.dokuwiki" },
+            "1": { "name": "punctuation.definition.tag.dokuwiki" },
+            "2": { "name": "entity.name.tag.dokuwiki" },
+            "3": { "name": "punctuation.definition.tag.dokuwiki" }
+          },
+          "comment": "<nowiki>no formatting</nowiki>"
+        },
+        {
+          "name": "markup.raw.dokuwiki",
+          "begin": "(%%)",
+          "end": "\\1",
+          "comment": "%%no formatting%%"
+        },
+        {
+          "name": "markup.other.paragraph.dokuwiki",
+          "match": "\\\\\\\\\\s",
+          "comment": "\\ followed by whitespace or \\n creates a line break"
+        },
+        {
+          "name": "string.quoted.double.dokuwiki",
+          "begin": "(\")",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.string.begin.dokuwiki" }
+          },
+          "end": "\\1",
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.string.end.dokuwiki" }
+          },
+          "patterns": [
+            {
+              "match": "\\\\.",
+              "name": "constant.character.escape.dokuwiki"
+            }
+          ],
+          "comment": "\"double-quoted string\""
+        },
+        {
+          "name": "comment.block.documentation.dokuwiki",
+          "begin": "\\(\\(",
+          "end": "\\)\\)",
+          "captures": {
+            "0": { "name": "punctuation.definition.comment.dokuwiki" }
+          },
+          "comment": "((footnote))"
+        }
+      ]
+    },
+    "php": {
+      "patterns": [
+        { "include": "source.php" },
+        {
+          "contentName": "meta.embedded.php",
+          "begin": "(^\\s*)?(?=<php>)",
+          "beginCaptures": {
+            "1": { "name": "punctuation.whitespace.embedded.leading.dokuwiki" }
+          },
+          "end": "(?<=</php>)(?!<php>)(\\s*$\\n?)",
+          "endCaptures": {
+            "1": { "name": "punctuation.whitespace.embedded.trailing.dokuwiki" }
+          },
+          "patterns": [
+            {
+              "contentName": "source.php",
+              "begin": "((<)(php)(>))",
+              "beginCaptures": {
+                "0": { "name": "punctuation.definition.embedded.begin.dokuwiki" },
+                "1": { "name": "meta.tag.template.dokuwiki" },
+                "2": { "name": "punctuation.definition.tag.dokuwiki" },
+                "3": { "name": "entity.name.tag.dokuwiki" },
+                "4": { "name": "punctuation.definition.tag.dokuwiki" }
+              },
+              "end": "(((</))(php)(>))",
+              "endCaptures": {
+                "0": { "name": "punctuation.definition.embedded.end.dokuwiki" },
+                "1": { "name": "meta.tag.template.dokuwiki" },
+                "2": { "name": "punctuation.definition.tag.dokuwiki" },
+                "3": { "name": "source.php" },
+                "4": { "name": "entity.name.tag.dokuwiki" },
+                "5": { "name": "punctuation.definition.tag.dokuwiki" }
+              },
+              "patterns": [
+                { "include": "source.php" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "uuid": "dc3d438f-8237-400b-b25d-19cb3bbdc508"
+}
