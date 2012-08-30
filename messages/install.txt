@@ -1,4 +1,4 @@
-DokuWiki Syntax v1.0.0 installed!
+DokuWiki Syntax v1.0.1 installed!
 
 Currently this package only provides syntax highlighting for DokuWiki syntax. Snippets and other niceties coming soon.
 
