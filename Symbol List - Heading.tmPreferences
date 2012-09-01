@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: Heading</string>
+	<key>scope</key>
+	<string>text.html.dokuwiki markup.heading.dokuwiki</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>
+			s/\A\s*(======)\s*(.*?)\s*(\1)\s*\z/$2/g;	# level 1 heading
+			s/\A\s*(=====)\s*(.*?)\s*(\1)\s*\z/\t$2/g;	# level 2 heading
+			s/\A\s*(====)\s*(.*?)\s*(\1)\s*\z/\t\t$2/g;	# level 3 heading
+			s/\A\s*(===)\s*(.*?)\s*(\1)\s*\z/\t\t\t$2/g;	# level 4 heading
+			s/\A\s*(==)\s*(.*?)\s*(\1)\s*\z/\t\t\t\t$2/g;	# level 5 heading
+		</string>
+	</dict>
+	<key>uuid</key>
+	<string>9A4ECBEB-7C23-45A4-A182-11E9BB214A8D</string>
+</dict>
+</plist>

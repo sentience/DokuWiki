@@ -1,6 +1,6 @@
-DokuWiki Syntax v1.0.1 installed!
+DokuWiki Syntax v1.1.0 installed!
 
-Currently this package only provides syntax highlighting for DokuWiki syntax. Snippets and other niceties coming soon.
+Currently this package provides syntax highlighting for DokuWiki syntax, and lists the heading structure of a DokuWiki file in the Goto Anywhere symbol list (Ctrl-R, or ⌘R on Mac). Snippets coming soon.
 
 If you aren’t seeing syntax highlighting, chances are you’re using a color scheme that doesn’t include syntax highlighting for markup. Try another color scheme and you might have better luck.
 
