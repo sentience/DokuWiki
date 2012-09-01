@@ -3,11 +3,11 @@ This is a port and refresh of the [DokuWiki bundle for TextMate](https://github.
 # Features
 
   * DokuWiki syntax definition (i.e. code highlighting)
+  * List headings in Goto Anywhere symbol list
 
 ## Planned
 
   * DokuWiki syntax snippets
-  * List headings in Goto Anywhere symbol list
 
 # Installation
 
