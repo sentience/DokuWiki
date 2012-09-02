@@ -1,6 +1,6 @@
-DokuWiki Syntax v1.1.0 installed!
+DokuWiki Syntax v1.2.0 installed!
 
-Currently this package provides syntax highlighting for DokuWiki syntax, and lists the heading structure of a DokuWiki file in the Goto Anywhere symbol list (Ctrl-R, or Cmd-R on Mac). Snippets coming soon.
+Currently this package provides syntax highlighting for DokuWiki syntax and a bunch of useful snippets (open the Command Palette and type "Snippet" to see a list), and also lists the heading structure of a DokuWiki file in the Goto Anywhere symbol list (Ctrl-R, or Cmd-R on Mac). Some convenient key bindings also automatically insert a new list item when you hit Enter.
 
 If you aren't seeing syntax highlighting, chances are you're using a color scheme that doesn't include syntax highlighting for markup. Try another color scheme and you might have better luck.
 

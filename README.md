@@ -4,10 +4,12 @@ This is a port and refresh of the [DokuWiki bundle for TextMate](https://github.
 
   * DokuWiki syntax definition (i.e. code highlighting)
   * List headings in Goto Anywhere symbol list
+  * DokuWiki syntax snippets
+  * Key bindings for automatic list continuation on Enter
 
 ## Planned
 
-  * DokuWiki syntax snippets
+  * Key bindings to end lists when hitting Enter on empty list item
 
 # Installation
 
@@ -15,7 +17,7 @@ The easiest way to install this package is using [Sublime Package Control](http:
 
 # Status
 
-Currently under development. What’s here is useful, but it isn’t yet complete. It should be safe to use, however. Feel free to install it, and update your copy as it develops!
+A relatively complete package of functionality, ready for production use. Still room for some tweaks and additional convenience features to be added, though!
 
 # License
 
