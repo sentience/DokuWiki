@@ -1,0 +1,3 @@
+DokuWiki upgraded to v1.2.0!
+
+Adds a bunch of DokuWiki syntax snippets (open Command Palette and type "Snippet" to see a list), and key bindings to automatically insert a new list item when you hit Enter in a list.

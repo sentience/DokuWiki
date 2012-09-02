@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+===== ${1:$SELECTION} =====
+
+
+]]></content>
+	<tabTrigger>h2</tabTrigger>
+	<scope>text.html.dokuwiki</scope>
+</snippet>

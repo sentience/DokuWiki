@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+  - 
+]]></content>
+	<tabTrigger>nu</tabTrigger>
+	<scope>text.html.dokuwiki</scope>
+	<description>Numbered list</description>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+^ ${1:head0} ^ ${2:head1} ^ ${3:head2} ^
+| ${4:data} | ${5:data} | ${6:data} | 
+| ${7:data} | ${8:data} | ${9:data} | 
+| ${10:data} | ${11:data} | ${12:data} |
+
+]]></content>
+	<tabTrigger>tab</tabTrigger>
+	<scope>text.html.dokuwiki</scope>
+</snippet>
