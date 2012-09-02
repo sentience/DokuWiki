@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+* 
+]]></content>
+	<tabTrigger>un</tabTrigger>
+	<scope>markup.list.unnumbered.dokuwiki</scope>
+	<description>Unnumbered item</description>
+</snippet>

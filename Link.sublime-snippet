@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+[[${1:link target}|${2:$SELECTION}]]
+]]></content>
+	<tabTrigger>link</tabTrigger>
+	<scope>text.html.dokuwiki</scope>
+</snippet>

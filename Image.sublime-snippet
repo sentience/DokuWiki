@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+{{${1:image}|${2:caption}}}
+]]></content>
+	<tabTrigger>img</tabTrigger>
+	<scope>text.html.dokuwiki</scope>
+</snippet>

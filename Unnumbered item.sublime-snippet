@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+  * 
+]]></content>
+	<tabTrigger>un</tabTrigger>
+	<scope>text.html.dokuwiki</scope>
+	<description>Unnumbered list</description>
+</snippet>
