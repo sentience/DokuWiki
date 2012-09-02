@@ -1,0 +1,21 @@
+[
+	{
+		"keys": ["enter"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/DokuWiki/Unnumbered item 2.sublime-snippet" },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "markup.list.unnumbered.dokuwiki" }
+		]
+	},
+	{
+		"keys": ["enter"],
+		"command": "insert_snippet",
+		"args": { "name": "Packages/DokuWiki/Numbered item 2.sublime-snippet" },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "markup.list.numbered.dokuwiki" }
+		]
+	}
+
+]
