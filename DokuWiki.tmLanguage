@@ -26,6 +26,11 @@
 					<key>name</key>
 					<string>punctuation.definition.heading.dokuwiki</string>
 				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>content.definition.heading.dokuwiki</string>
+				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
@@ -292,6 +297,66 @@
 				<dict>
 					<key>include</key>
 					<string>#inline</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(&lt;)(code)\s*([a-zA-Z]*)(&gt;)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag.dokuwiki</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.attribute-name</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>&lt;code&gt;code block&lt;/code&gt;</string>
+			<key>end</key>
+			<string>(&lt;/)(code)(&gt;)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag.dokuwiki</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.dokuwiki</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>code.markup.raw.dokuwiki</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>.</string>
+					<key>name</key>
+					<string>variable.language.fenced.markdown</string>
 				</dict>
 			</array>
 		</dict>
