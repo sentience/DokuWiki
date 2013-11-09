@@ -124,46 +124,46 @@
         { "include": "#inline" }
       ],
       "comment": "<sup>erscript</sup> or <sub>script</sub>"
-    },
-    {
-      "name": "code.markup.raw.dokuwiki",
-      "begin": "(<)(code)\\s*([a-zA-Z]*)(>)",
-      "end": "(</)(code)(>)",
-      "beginCaptures": {
-        "1": { "name": "punctuation.definition.tag.dokuwiki" },
-        "2": { "name": "entity.name.tag.dokuwiki" },
-        "3": { "name": "entity.other.attribute-name" },
-        "4": { "name": "punctuation.definition.tag.dokuwiki" }
-      },
-      "endCaptures": {
-        "1": { "name": "punctuation.definition.tag.dokuwiki" },
-        "2": { "name": "entity.name.tag.dokuwiki" },
-        "3": { "name": "punctuation.definition.tag.dokuwiki" }
-      },
-      "patterns": [
-        
-        { "name": "variable.language.fenced.markdown",
-          "match": "."
-        }
-      ],
-      "comment": "<code>code block</code>"
-    },
-    {
-      "name": "markup.raw.dokuwiki",
-      "begin": "(<)(code)(?:\\s+[^>]*)?(>)",
-      "end": "(</)(\\2)(>)",
-      "captures": {
-        "0": { "name": "meta.tag.template.code.dokuwiki" },
-        "1": { "name": "punctuation.definition.tag.dokuwiki" },
-        "2": { "name": "entity.name.tag.dokuwiki" },
-        "3": { "name": "punctuation.definition.tag.dokuwiki" }
-      },
-      "comment": "<code>code block</code>"
     }
   ],
   "repository": {
     "inline": {
       "patterns": [
+        {
+          "name": "code.markup.raw.dokuwiki",
+          "begin": "(<)(code)\\s*([a-zA-Z]*)(>)",
+          "end": "(</)(code)(>)",
+          "beginCaptures": {
+            "1": { "name": "punctuation.definition.tag.dokuwiki" },
+            "2": { "name": "entity.name.tag.dokuwiki" },
+            "3": { "name": "entity.other.attribute-name" },
+            "4": { "name": "punctuation.definition.tag.dokuwiki" }
+          },
+          "endCaptures": {
+            "1": { "name": "punctuation.definition.tag.dokuwiki" },
+            "2": { "name": "entity.name.tag.dokuwiki" },
+            "3": { "name": "punctuation.definition.tag.dokuwiki" }
+          },
+          "patterns": [
+            
+            { "name": "variable.language.fenced.markdown",
+              "match": "."
+            }
+          ],
+          "comment": "<code>code block</code>"
+        },
+        {
+          "name": "markup.raw.dokuwiki",
+          "begin": "(<)(code)(?:\\s+[^>]*)?(>)",
+          "end": "(</)(\\2)(>)",
+          "captures": {
+            "0": { "name": "meta.tag.template.code.dokuwiki" },
+            "1": { "name": "punctuation.definition.tag.dokuwiki" },
+            "2": { "name": "entity.name.tag.dokuwiki" },
+            "3": { "name": "punctuation.definition.tag.dokuwiki" }
+          },
+          "comment": "<code>code block</code>"
+        },
         {
           "name": "markup.bold.dokuwiki",
           "begin": "(\\*\\*)",
